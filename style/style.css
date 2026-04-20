@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: fantasy;
+
+    background-image: url(https://i.redd.it/mnnxwzjvjuib1.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+
+h1 {
+    margin-top: 40px;
+    background: azure;
+    padding: 15px 30px;
+    font-size: 40px;
+    border-radius: 10px;
+}
+
+/* Main container */
+
+.container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 300px;
+}
+
+/* Input boxes */
+
+.box {
+    display: flex;
+    flex-direction: column;
+    background: rgba(73, 255, 49, 0.7);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+input {
+    margin-top: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Button */
+
+button {
+    padding: 15px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(115, 255, 0, 0.7);
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-4px);
+}
+
+/* Spinner */
+
+#spinner {
+    align-self: center;
+
+    border: 10px solid lightgrey;
+    border-top: 10px solid lime;
+
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+    opacity: 0;
+}
+
+/* Active spinner */
+
+.loading {
+    opacity: 1;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#console {
+    width: 300px;
+    background: black;
+    color: lime;
+    font-family: monospace;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 120px;
+    box-shadow: 0 0 10px lime;
+}
+
+.line {
+    margin: 3px 0;
+}
+
+.spam-img{
+    position:fixed;
+    width:300px;
+    z-index:9999;
+    pointer-events:none;
+
+    animation: fly linear infinite;
+}
+
+@keyframes fly{
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(var(--x), var(--y));
+    }
+}
